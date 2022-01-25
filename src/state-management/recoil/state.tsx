@@ -1,5 +1,5 @@
 import axios from "axios";
-import { selector } from "recoil";
+import { atom, selector } from "recoil";
 
 const dragonsListState = selector({
   key: "CurrentUserName",
@@ -14,4 +14,9 @@ const dragonsListState = selector({
   },
 });
 
-export { dragonsListState };
+const loginStatus = atom({
+  key: "loginStatus",
+  default: false,
+});
+
+export { dragonsListState, loginStatus };
